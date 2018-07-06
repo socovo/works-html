@@ -1,0 +1,75 @@
+/* ---------- section ---------- */
+
+.flex-container, .shadow-container {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-items {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: red;
+    animation: box-move 1.5s infinite ease-in alternate;
+}
+.shadow-container {
+    position: relative;
+    top: 275px;
+}
+.shadow-li {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+.shadow-items {
+    width: 14px;
+    height: 10px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-image: radial-gradient(closest-side, black,transparent);
+    animation: black-shadow 1.5s infinite ease-in alternate;
+}
+
+.flex-items:nth-child(2) {
+    background-color: green;
+}
+.flex-items:nth-child(2), .shadow-li:nth-child(2) > div {
+    animation-delay: .5s
+}
+.flex-items:nth-child(3) {
+    background-color: blue;
+}
+.flex-items:nth-child(3), .shadow-li:nth-child(3) > div {
+    animation-delay: 1s
+}
+.flex-items:nth-child(4) {
+    background-color: yellow;
+}
+.flex-items:nth-child(4), .shadow-li:nth-child(4) > div {
+    animation-delay: 1.5s
+}
+
+@keyframes box-move {
+    from {
+        top: 0;
+        left: 0;
+    }
+    to {
+        top: 300px;
+        left: 0;
+    }
+}
+@keyframes black-shadow {
+    from {
+        width: 14px;
+        height: 10px;
+    }
+    to {
+        width: 70px;
+        height: 50px;
+    }
+}

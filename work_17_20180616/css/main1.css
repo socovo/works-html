@@ -1,0 +1,56 @@
+/* ---------- main ---------- */
+body {
+    min-width: 1548px;
+}
+main {
+    width: 1548px;
+    margin: 0 auto;
+}
+
+aside {
+    float: left;
+    margin-top: 100px;
+    margin-left: 16px;
+    width: 230px;
+    height: 742px;
+    /* margin-top: 100px;
+    margin-left: 100px; */
+}
+aside ul li {
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 16px 1px black;
+}
+aside ul li:nth-child(1) {
+    margin-top: 0;
+    background-image: url("../images/demo1/Don\'t-Starve.jpg");
+}
+aside ul li:nth-child(2) {
+    background-image: url("../images/demo1/Dota-2.jpg");
+}
+aside ul li:nth-child(3) {
+    background-image: url("../images/demo1/GTA-V.jpg");
+}
+aside ul li:nth-child(4) {
+    background-image: url("../images/demo1/NEKOPARA-Vol.2.jpg");
+}
+aside ul li:nth-child(5) {
+    background-image: url("../images/demo1/Portal-2.jpg");
+}
+aside ul li:nth-child(6) {
+    background-image: url("../images/demo1/PUBG.jpg");
+}
+aside ul li a {
+    display: block;
+    width: 230px;
+    height: 107px;
+    background-color: transparent;
+}
+ception {
+    float: left;
+    margin-top: 100px;
+    margin-left: 16px;
+    box-shadow: 0 0 16px 1px black;
+}

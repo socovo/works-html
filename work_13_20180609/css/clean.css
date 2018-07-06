@@ -1,0 +1,15 @@
+/* 默认样式预清除 */
+body, ul {
+	margin: 0;
+	padding: 0;
+}
+h3 {
+	margin: 0;
+	font-weight: normal;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}

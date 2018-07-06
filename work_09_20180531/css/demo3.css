@@ -1,0 +1,156 @@
+body,ul,li {
+	margin:0px;
+	padding:0px;
+}
+
+ul,ol {
+	list-style-type:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+#main {
+	width:100%;
+}
+
+#header-area {
+	position:fixed;
+	top:0px;
+	width:100%;
+	background-color:black;
+	text-align:center;
+}
+
+#header {
+	display:inline-block;
+	width:1000px;
+}
+
+#header ul {
+	display:inline-block;
+	background-color:black;
+}
+
+.corner {
+	display:inline-block;
+	width:8px;
+	height:8px;
+	margin:21px 21px 0 0;
+	background-color:red;
+	vertical-align:top;
+}
+
+#header ul li {
+	display:inline-block;
+	padding-right:100px;
+	color:white;
+	background-color:black;
+	line-height:50px;
+}
+
+#header ul li:nth-child(3) {
+	padding-right:0px;
+}
+
+#content {
+	width:500px;
+	height:500px;
+	margin:70px auto 0;
+}
+
+#left-ear {
+	float:left;
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	background-color:#993300;
+}
+#face {
+	float:left;
+	width:400px;
+	height:400px;
+	margin-left:-50px;
+	border-radius:400px;
+	background-color:#996600;
+}
+#eyes {
+	width:400px;
+	height:120px;
+	margin-top:50px;
+}
+#right-ear {
+	float:left;
+	width:100px;
+	height:100px;
+	margin-left:-50px;
+	border-radius:50%;
+	background-color:#993300;
+}
+#left-eye {
+	float:left;
+	width:100px;
+	height:120px;
+	margin-left:75px;
+	border-radius:50%;
+	background-color:white;
+}
+#left-light {
+	width:50px;
+	height:50px;
+	margin-top:10px;
+	margin-left:6px;
+	border-radius:50%;
+	background-color:black;
+}
+#right-eye {
+	float:left;
+	width:100px;
+	height:120px;
+	margin-left:50px;
+	border-radius:50%;
+	background-color:white;
+}
+#right-light {
+	width:50px;
+	height:50px;
+	margin-top:10px;
+	margin-left:6px;
+	border-radius:50%;
+	background-color:black;
+}
+#nose {
+	width:80px;
+	height:50px;
+	margin-top:40px;
+	margin-left:160px;
+	border-radius:50px;
+	background-color:#cc3300;
+}
+#left-nose {
+	float:left;
+	width:30px;
+	height:30px;
+	margin-top:10px;
+	margin-left:7.5px;
+	border-radius:50%;
+	background-color:#996600;
+}
+#right-nose {
+	float:left;
+	width:30px;
+	height:30px;
+	margin-top:10px;
+	margin-left:5px;
+	border-radius:50%;
+	background-color:#996600;
+}
+#mouse {
+	width:150px;
+	height:50px;
+	margin-top:40px;
+	margin-left:125px;
+	border-radius:100% 20% 30% 10%;
+	background-color:white;
+}

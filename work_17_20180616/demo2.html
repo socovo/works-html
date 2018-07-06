@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta http-equiv="content-type" content="textml" charset="utf-8">
+    <title>快递单</title>
+    <meta name="Keywords" content="快递单, 顺丰快递">
+    <meta name="Description" content="您的快递到了">
+    <link rel="stylesheet" media="screen" href="css/clean.css">
+    <link rel="stylesheet" media="screen" href="css/header2.css">
+    <link rel="stylesheet" media="screen" href="css/main2.css">
+</head>
+<body>
+    <header>
+        <div class='header-area'>
+            <ul class='header-width-set'>
+                <li>
+                    <div class='tips'></div>
+                    <span>主题: 快递单</span>
+                </li>
+                <li>
+                    <div class='tips'></div>
+                    <span>邮箱: socovo@live.com</span>
+                </li>
+                <li>
+                    <div class='tips'></div>
+                    <span>姓名: 宋臣</span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <p class='express-name'>顺丰快递</p>
+        <form action='' method="GET">
+            <fieldset>
+                <legend>发货单</legend>
+                <span class='description'>发货人:</span>
+                <input class='text-input-size' type='text' name='send-name' width=''>
+                <span class='description'>地址:</span>
+                <input class='text-input-size' type='text' name='send-addr' width=''>
+                <br>
+                <span class='description'>电话:</span>
+                <input class='text-input-size' type='text' name='send-call' width=''>
+                <span class='description'>邮编:</span>
+                <input class='text-input-size' type='text' name='send-code' width=''>
+            </fieldset>
+            <fieldset>
+                <legend>收货单</legend>
+                <span class='description'>发货人:</span>
+                <input class='text-input-size' type='text' name='get-name' width=''>
+                <span class='description'>地址:</span>
+                <input class='text-input-size' type='text' name='get-addr' width=''>
+                <br>
+                <span class='description'>电话:</span>
+                <input class='text-input-size' type='text' name='get-call' width=''>
+                <span class='description'>邮编:</span>
+                <input class='text-input-size' type='text' name='get-code' width=''>
+                <br>
+                <span class='description'>地区:</span>
+                <select>
+                    <option value='beijing'>北京</option>
+                    <option value='shanghai'>上海</option>
+                    <option value='guangzhou'>广州</option>
+                    <option value='shenzhen'>深圳</option>
+                </select>
+                <br>
+                <span class='description'>包装:</span>
+                <input class='box-size-adjust' type='checkbox' value='纸箱'>
+                <label>纸箱</label>
+                <input class='box-size-adjust' type='checkbox' value='木箱'>
+                <label>木箱</label>
+                <input class='box-size-adjust' type='checkbox' value='快递袋'>
+                <label>快递袋</label>
+                <input class='box-size-adjust' type='checkbox' value='其他'>
+                <label>其他</label>
+                <br>
+                <span class='description'>付款方式:</span>
+                <input class='box-size-adjust' type='radio' name='pay' value='现金'>
+                <label>现金</label>
+                <input class='box-size-adjust' type='radio' name='pay' value='支付宝'>
+                <label>支付宝</label>
+                <input class='box-size-adjust' type='radio' name='pay' value='网银'>
+                <label>网银</label>
+                <input class='box-size-adjust' type='radio' name='pay' value='ATM'>
+                <label>ATM</label>
+            </fieldset>
+            <fieldset>
+                <legend>货物信息</legend>
+                <span class='description'>货物名称:</span>
+                <input class='long-input-size' type='text' name='item-name' width=''>
+                <span class='description'>数量:</span>
+                <input class='value-input-size' type='text' name='item-number' width=''>
+                <br>
+                <span class='description'>重量:</span>
+                <input class='value-input-size' type='text' name='item-weight' width=''>
+                <span class='description'>发货时间:</span>
+                <input class='text-input-size' type='text' name='item-time' width=''>
+            </fieldset>
+            <input class='button-size' type='submit' value='确定'>
+            <input class='button-size' type='button' value='取消'>
+        </form>
+    </section>
+    <footer></footer>
+</body>
+</html>

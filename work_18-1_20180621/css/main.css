@@ -1,0 +1,9 @@
+/* ---------- main.css ---------- */
+
+body {
+    background-color: pink;
+}
+main {
+    min-width: 1200px;
+    margin: 100px auto 0;
+}

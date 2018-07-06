@@ -1,0 +1,69 @@
+/* ---------- section ---------- */
+
+.flex-container {
+    display: flex;
+    width: 524px;
+    height: 184px;
+    margin: 100px auto 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.flex-item {
+    width: 130px;
+    height: 60px;
+    background-color: white;
+    cursor: pointer;
+    font-size: .7rem;
+    text-align: center;
+}
+.bg-logo {
+    width: 20px;
+    height: 20px;
+    margin: 15px auto 0;
+    background-image: url('../images/nav.png');
+    background-size: cover;
+}
+.flex-item:hover {
+    transform: scale(1.2);
+    transition-duration: .2s;
+    box-shadow: 0 0 4px 1px black;
+}
+.flex-item:nth-child(1) .bg-logo {
+    background-position: 0 -80px;
+}
+.flex-item:nth-child(2) .bg-logo {
+    background-position: 0 -100px;
+}
+.flex-item:nth-child(3) .bg-logo {
+    background-position: 0 -120px;
+}
+.flex-item:nth-child(4) .bg-logo {
+    background-position: 0 -140px;
+}
+.flex-item:nth-child(5) .bg-logo {
+    background-position: 0 -160px;
+}
+.flex-item:nth-child(6) .bg-logo {
+    background-position: 0 -180px;
+}
+.flex-item:nth-child(7) .bg-logo {
+    background-position: 0 -200px;
+}
+.flex-item:nth-child(8) .bg-logo {
+    background-position: 0 -220px;
+}
+.flex-item:nth-child(9) .bg-logo {
+    background-position: 0 0;
+}
+.flex-item:nth-child(10) .bg-logo {
+    background-position: 0 -20px;
+}
+.flex-item:nth-child(11) .bg-logo {
+    background-position: 0 -40px;
+}
+.flex-item:nth-child(12) .bg-logo {
+    background-position: 0 -60px;
+}

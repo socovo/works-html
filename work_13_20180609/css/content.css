@@ -1,0 +1,45 @@
+/* ---------- content ---------- */
+.wrap {
+    width: 260px;
+    margin: 100px auto 0;
+    box-shadow: 0 0 16px 2px black;
+}
+
+/* 标题区 */
+.title-list {
+    width: 260px;
+    height: 34px;
+    background-color: white;
+}
+.line-li {
+    display: inline-block;
+    vertical-align: middle;/* top/middle/bottom 都可以居中, 因为前提 子级 都指定了行高, 本身没有指定行高 */
+}
+.icon-eye {
+    margin-left: 8px;
+    line-height: 34px;/* 居中要素 - 子级设置行高 */
+    font-size: 1.8rem;
+}
+.title-text {
+    line-height: 34px;/* 居中要素 - 子级设置行高 */
+    font-size: 1rem;
+}
+
+/* 内容区 */
+.content-list {
+    width: 260px;
+    background-color: white;
+}
+.content-li {
+    width: 260px;
+    height: 34px;
+    margin-top: 1px;
+    background-color: rgb(235,235,235);
+    line-height: 34px;
+    font-size: .9rem;
+    text-indent: 10px;
+    cursor: pointer;
+}
+.content-li:hover {
+    background-color: rgb(235,194,129);
+}

@@ -1,0 +1,125 @@
+/* ---------- content ---------- */
+
+/* -------------------- 主界面 -------------------- */
+.bg-width-set {
+    min-width: 1200px;/* 必须使用 min- 曾能使得图片不被遮挡 */
+    min-height: 520px;
+    margin: 50px auto 0;
+    background-image: url('../images/demo3/dlbg.jpg');
+    background-repeat: no-repeat;/* 适配4K以上显示 */
+    background-position: center;
+}
+/* 自适应布局 */
+.content-width-set {
+    position: relative;
+    width: 1200px;
+    height: 520px;
+    margin: 0 auto;
+}
+/* -------------------- 登录区域 -------------------- */
+.login-area {
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    width: 340px;
+    height: 420px;
+    background-color: white;
+    box-shadow: 0 0 4px 1px black;
+}
+/* -------------------- 小图标外加登录框区域 -------------------- */
+.input-all-size {
+    display: block;
+    width: 260px;
+    height: 40px;
+    margin: 0 auto;
+    border: 1px solid grey;
+}
+.input-all-size:nth-child(1) {
+    margin-top: 30px;
+}
+.input-all-size:nth-child(2) {
+    margin: 20px auto;
+}
+/* -------------------- 小图标 -------------------- */
+.mini-logo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-position: 0 -2px;
+}
+.input-all-size:nth-child(1) .mini-logo {
+    background-image: url('../images/demo3/mima.jpg');
+}
+.input-all-size:nth-child(2) .mini-logo {
+    background-image: url('../images/demo3/zhanghao.jpg');
+}
+/* -------------------- 输入框 -------------------- */
+.input-size {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    height: 40px;
+    font-size: 1.0rem;
+    text-indent: 8px;
+}
+/* -------------------- 登录选项区域 -------------------- */
+.option {
+    width: 260px;
+    height: 16px;
+    margin: 0 auto;
+    font-size: .7rem;
+}
+[type='checkbox'] {
+    margin: 0;
+    margin-top: 2px;
+    margin-right: 4px;
+    vertical-align: top;
+}
+.reg {
+    padding-left: 70px;
+    color: grey;
+}
+.forgot-pass {
+    padding-left: 8px;
+    color: grey;
+}
+/* -------------------- 提交按钮 -------------------- */
+.submit-button {
+    display: block;
+    width: 255px;
+    height: 44px;
+    margin: 20px auto 25px;
+    border-width: 0;
+    background-image: url('../images/demo3/but.jpg');
+    cursor: pointer;
+}
+/* -------------------- 第三方登录区域 -------------------- */
+.third-part {
+    width: 340px;
+    height: 28px;
+    margin: 15px auto 0;
+    padding-top: 15px;
+    border-top: 1px dotted grey;
+    text-align: center;
+}
+.third-part span {
+    font-size: 0.8rem;
+    line-height: 28px;
+    vertical-align: top;
+}
+.third-part-logo {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-size: cover;
+    cursor: pointer;
+}
+#wechat {
+    background-image: url('../images/demo3/weixin.png');
+}
+#qq {
+    background-image: url('../images/demo3/qqlogin.png');
+}
+#taobao {
+    background-image: url('../images/demo3/taobao.png');
+}

@@ -1,0 +1,98 @@
+/* ---------- section ---------- */
+
+.slide, .mini {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 16px 1px black;
+}
+.slide {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    line-height: 200px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.mini {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 1rem;
+}
+
+.top, .mini-top {
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition-duration: 5s;
+}
+.bottom, .mini-bottom {
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+}
+.left, .mini-left {
+    transform: rotateY(-90deg);
+    transform-origin: left;
+}
+.right, .mini-right {
+    transform: rotateY(90deg);
+    transform-origin: right;
+}
+.front {
+    transform: translateZ(200px);
+}
+.mini-front {
+    transform: translateZ(100px);
+}
+.back, .mini-back {
+    transform: rotateY(180deg);
+}
+.mini-top {
+    background-image: url('../images/mini/ti5.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 64px 4px goldenrod;
+}
+.mini-bottom {
+    background-image: url('../images/mini/ti2.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 64px 4px blue;
+}
+.mini-left {
+    background-image: url('../images/mini/ti4.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 64px 4px purple;
+}
+.mini-right {
+    background-image: url('../images/mini/ti6.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 64px 4px red;
+}
+.mini-front {
+    background-image: url('../images/mini/ti3.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 64px 4px green;
+}
+.mini-back {
+    background-image: url('../images/mini/ti7.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 64px 4px blue;
+}
+
+.container:hover {
+    transform: rotateY(360deg);
+}
+.container:hover .top {
+    transform: rotateX(225deg);
+    transform-origin: top;
+}
+.container:hover > .mini-container {
+    transform: translateY(-250px) translateZ(50px);
+}

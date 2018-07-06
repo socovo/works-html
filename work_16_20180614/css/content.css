@@ -1,0 +1,121 @@
+.content-area {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 500px;
+    margin: 100px auto 0;
+}
+.aside-top {
+    width: 195px;
+    height: 295px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(199,146,234);
+    box-shadow: 0 0 8px 1px black;
+    text-align: center;
+}
+.aside-top p:nth-child(2) {
+    margin: 20px 0;
+    font-weight: bold;
+}
+.aside-top p:nth-child(3) {
+    margin-bottom: 20px;
+    font-size: .8rem;
+}
+.aside-bottom {
+    width: 195px;
+    height: 200px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    background-color: rgb(247,140,108);
+    text-align: right;
+    box-shadow: 0 0 8px 1px black;
+}
+.aside-bottom li {
+    padding-right: 10px;
+    border-bottom: 1px solid black;
+    font-size: .8rem;
+    line-height: 32px;
+}
+.aside-bottom li:hover {
+    color: rgb(247,140,108);
+    background-color: black;
+    cursor: pointer;
+}
+article {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 50px;
+    background-color: rgb(193,230,140);
+    box-shadow: 0 0 8px 1px black;
+}
+article strong a:link {
+    color: black;
+}
+article strong a:visited {
+    color: black;
+}
+article strong a:hover {
+    background-color: rgb(199,146,234);
+}
+article strong a:active {
+    background-color: rgb(247,140,108);
+}
+h3 {
+    box-sizing: border-box;
+    position: relative;
+    right: 50px;
+    width: 400px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    color: rgb(193,230,140);
+    line-height: 4rem;
+    background-color: black;
+}
+.bg-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-image: url('../images/luna.png');
+    background-size: 300%;
+    background-position: center top;
+    box-shadow: 0 0 8px 1px black;
+    animation:routation 30s infinite linear;
+}
+.value-set {
+    width: 240px;
+    margin: 0 auto;
+}
+
+.introduce {
+    margin: 30px 0 40px;
+    font-size: .9rem;
+    font-weight: normal;
+}
+.att-title {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.attributes-list li {
+    width: 250px;
+    line-height: 2rem;
+    font-weight: lighter;
+}
+.meter-set {
+    width: 200px;
+    font-size: 1.5rem;
+    padding-left: 5px;
+}
+@keyframes routation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

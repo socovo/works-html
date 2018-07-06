@@ -1,0 +1,94 @@
+/* -------------------- content -> bgpic-box/背景图 -------------------- */
+
+#bgpic-box {/* 定位基准 */
+    position: relative;
+}
+
+/* 列表项绝对定位到定位基准, 偏移 0 */
+.bgpic-list {/* 所有 li 项 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 非当前选中项所在图片完全透明 */
+.bgpic-list img {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* 将当前选中项所在的图片显示出来 */
+.bgpic-list input:checked + img {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+/* 单选按钮定位 */
+.bgpic-list input {/* 单选切换按钮 */
+    position: absolute;
+    z-index: 1;/* 提高层级 */
+}
+.bgpic-list:nth-child(1) input {
+    bottom: 20px;
+    right: 125px;
+}
+.bgpic-list:nth-child(2) input {
+    bottom: 20px;
+    right: 110px;
+}
+.bgpic-list:nth-child(3) input {
+    bottom: 20px;
+    right: 95px;
+}
+.bgpic-list:nth-child(4) input {
+    bottom: 20px;
+    right: 80px;
+}
+.bgpic-list:nth-child(5) input {
+    bottom: 20px;
+    right: 65px;
+}
+.bgpic-list:nth-child(6) input {
+    bottom: 20px;
+    right: 50px;
+}
+
+/* label 定位及样式调整 */
+.bgpic-list label {
+    display: none;/* 所有 label 不显示 */
+    /* 垂直居中定位 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 100px;
+    /* 字体样式 */
+    font-weight: blod;
+    color: white;
+    font-size: 3rem;
+    text-align: center;/* 使 label 水平居中 */
+    cursor: pointer;/* 触发手指效果 */
+    opacity: .5;/* 半透明 */
+    transition: opacity .5s;
+}
+.prev {/* 左 label 定位 */
+    left: 234px;
+}
+.next {/* 右 label 定位 */
+    right: 0;
+}
+.bgpic-list label:hover {/* label 滑过的效果 */
+    opacity: 1;/* 不透明 */
+    text-shadow: 0 0 15px black;/* 阴影效果 */
+    background-color: rgba(0,0,0,.8);
+}
+.bgpic-list input:checked ~ label {/* 当前选中的 label */
+    display: block;/* 显示当前选中 label */
+    z-index: 1;/* 提高层级 */
+}
+
+/* <>字符不居中, 需要单独设置 */
+.bgpic-list label span {
+    position: relative;
+    top: 15px;
+}

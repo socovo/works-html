@@ -1,0 +1,53 @@
+/* ---------- section ---------- */
+
+.slide {
+    position: absolute;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    background-image: repeating-linear-gradient(to right, red 0%, red 1px, transparent 1px, transparent 10%),
+    repeating-linear-gradient(to top, red 0%, red 1px, transparent 1px, transparent 10%);
+    color: black;
+    line-height: 300px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 16px 1px black;
+}
+.top {
+    transform: rotateX(90deg);
+    transform-origin: top;
+}
+.bottom {
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+}
+.left {
+    transform: rotateY(-90deg);
+    transform-origin: left;
+}
+.right {
+    transform: rotateY(90deg);
+    transform-origin: right;
+}
+.front {
+    transform: translateZ(300px);
+}
+.back {
+    transform: rotateY(180deg);
+}
+.center-z {
+    transform: translateZ(150px);
+    background-color: rgba(0,0,0,.8);
+}
+.center-y {
+    transform: translateY(150px) rotateX(90deg);
+    transform-origin: top;
+    background-color: rgba(0,0,0,.8);
+}
+.center-x {
+    transform: translateX(150px) rotateY(-90deg);
+    transform-origin: left;
+    background-color: rgba(0,0,0,.8);
+}

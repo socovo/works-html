@@ -1,0 +1,26 @@
+/* ---------- main ---------- */
+
+.stage {
+    min-width: 1200px;
+    perspective: 800px;
+    /* perspective-origin: center top; */
+}
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 200px auto 0;
+    border: 1px solid transparent;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 150px;
+    animation: rotation 60s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateX(720deg) rotateY(720deg) rotateZ(360deg);
+    }
+}

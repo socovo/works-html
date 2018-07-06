@@ -1,0 +1,23 @@
+/* ---------- section ---------- */
+
+.flex-container {
+    display: flex;
+    width: 200px;
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.flex-item {
+    width: 180px;
+    padding-left: 20px;
+    font-size: .9rem;
+    line-height: 30px;
+}
+.flex-item:hover {
+    background-color: rgba(240,113,120,.5);
+}
+.flex-item:hover .iconfont {
+    transform: scale(1.2);
+    transition-duration: .2s;
+}

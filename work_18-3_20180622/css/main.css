@@ -1,0 +1,36 @@
+/* ---------- main ---------- */
+
+.stage {
+    min-width: 1200px;
+    perspective: 800px;
+    /* animation: p-origin 5s infinite ease-in-out; */
+}
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 400px auto 0;
+    border: 1px solid transparent;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 100px;
+    transition-duration: 5s;
+}
+.mini-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 50px auto 0;
+    border: 1px solid transparent;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 50px;
+    transition-duration: 5s;
+    transform: translateZ(50px);
+}
+
+/* @keyframes p-origin {
+    0% { perspective-origin: bottom }
+    25% { perspective-origin: 40% center }
+    50% { perspective-origin: top }
+    75% { perspective-origin: 60% center }
+    100% { perspective-origin: bottom }
+} */

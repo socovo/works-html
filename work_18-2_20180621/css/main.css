@@ -1,0 +1,288 @@
+/* ---------- main.css ---------- */
+
+/* 背景设定 */
+section {
+    min-width: 1200px;
+    background-color: green;
+}
+section:nth-child(1) {
+    height: 200px;
+    margin-top: 50px;
+}
+section:nth-child(2) {
+    height: 90px;
+    border-bottom: 20px dashed white;
+    background-color: black;
+}
+section:nth-child(3) {
+    height: 90px;
+    background-color: black;
+}
+section:nth-child(4) {
+    height: 200px;
+    background-color: green;
+}
+
+/* 表演区设定 */
+content {
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: -600px;
+    width: 100%;
+    height: 600px;
+    background-color: transparent;
+}
+
+/* 画一个小人 */
+character {
+    display: block;
+    position: relative;
+    z-index: 2;
+    top: 200px;
+    width: 70px;
+    height: 180px;
+    animation: walk 20s linear forwards;
+}
+.hat-top {
+    position: absolute;
+    z-index: 5;
+    top: 2px;
+    left: 25px;
+    width: 20px;
+    height: 10px;
+    border-radius: 50px 50px 0 0;
+    background-color: red;
+    transform: rotate(-10deg);
+    transform-origin: 50% 150%;
+}
+.hat {
+    position: absolute;
+    z-index: 5;
+    top: 12px;
+    left: 15px;
+    width: 40px;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: red;
+    transform: rotate(-10deg);
+    transform-origin: 50% 100%;
+}
+.c-head {
+    position: absolute;
+    z-index: 4;
+    top: 10px;
+    left: 25px;
+    width: 20px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: pink;
+}
+.c-neck {
+    position: absolute;
+    z-index: 4;
+    top: 35px;
+    left: 30px;
+    width: 10px;
+    height: 5px;
+    background-color: pink;
+}
+.c-shouder {
+    position: absolute;
+    z-index: 4;
+    top: 40px;
+    left: 22.5px;
+    width: 25px;
+    height: 15px;
+    background-color: yellow;
+    border-radius: 10px 10px 0 0;
+}
+.c-body {
+    position: absolute;
+    z-index: 4;
+    top: 55px;
+    left: 22.5px;
+    width: 25px;
+    height: 40px;
+    background-color: red;
+}
+.c-arm-left {
+    position: absolute;
+    z-index: 3;
+    top: 50px;
+    left: 30px;
+    width: 10px;
+    height: 50px;
+    background-color: lightyellow;
+    transform: rotate(30deg);
+    transform-origin: 50% 10%;
+    animation: walk-arm-left 2s ease-in-out 9 alternate;
+}
+.c-arm-right {
+    position: absolute;
+    z-index: 5;
+    top: 50px;
+    left: 30px;
+    width: 10px;
+    height: 50px;
+    background-color: lightyellow;
+    transform: rotate(-40deg);
+    transform-origin: 50% 10%;
+    animation: walk-arm-right 2s ease-in-out 9 alternate;
+}
+.c-thigh-left {
+    position: absolute;
+    z-index: 3;
+    top: 90px;
+    left: 27.5px;
+    width: 15px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(-40deg);
+    transform-origin: 50% 10%;
+    animation: walk-thigh-left 2s ease-in-out 9 alternate;
+}
+.c-thign-right {
+    position: absolute;
+    z-index: 4;
+    top: 90px;
+    left: 27.5px;
+    width: 15px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(30deg);
+    transform-origin: 50% 10%;
+    animation: walk-thigh-right 2s ease-in-out 9 alternate;
+}
+.c-leg-left {
+    position: absolute;
+    z-index: 3;
+    top: 125px;
+    left: 55px;
+    width: 15px;
+    height: 40px;
+    background-color: brown;
+    transform: rotate(-10deg);
+    transform-origin: 50% 10%;
+    animation: walk-leg-left 2s ease-in-out 9 alternate;
+}
+.c-leg-right {
+    position: absolute;
+    z-index: 4;
+    top: 125px;
+    left: 10px;
+    width: 15px;
+    height: 40px;
+    background-color: brown;
+    transform: rotate(40deg);
+    transform-origin: 50% 10%;
+    animation: walk-leg-right 2s ease-in-out 9 alternate;
+}
+.eyes {
+    position: absolute;
+    z-index: 5;
+    top: 7px;
+    left: 15px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+}
+.kaidilake {
+    position: absolute;
+    display: block;
+    top: 260px;
+    left: 90%;
+    width: 284px;
+    height: 92px;
+    background-image: url('../images/凯迪拉克.png');
+    background-size: cover;
+    animation: carmove 2s 12s linear forwards;
+}
+
+@keyframes carmove {
+    from { left: 90%; }
+    to { left: 650px; }
+}
+
+@keyframes walk {
+    0% { left: -100px; top: 200px; }
+    5% { left: -60px; }
+    10% { left: 0; }
+    15% { left: 40px; }
+    20% { left: 100px; }
+    25% { left: 140px; }
+    30% { left: 200px; }
+    35% { left: 240px; }
+    40% { left: 300px; }
+    45% { left: 340px; }
+    50% { left: 400px; }
+    55% { left: 440px; }
+    60% { left: 500px; }
+    65% { left: 540px; }
+    70% { left: 600px; top: 200px; transform: rotate(0deg); }
+    75% { left: 400px; top: 100px; transform: rotate(-90deg); }
+    80% { left: 200px; top: 200px; transform: rotate(-90deg); }
+    85% { left: 100px; top: 280px; }
+    90% { left: 100px; top: 250px; }
+    100% { left: 100px; top: 280px;  transform: rotate(-90deg); }
+
+}
+@keyframes walk-arm-left {
+    from {
+        transform: rotate(30deg);
+    }
+    to {
+        transform: rotate(-40deg);
+    }
+
+}
+@keyframes walk-arm-right {
+    from {
+        transform: rotate(-40deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+
+}
+@keyframes walk-thigh-left {
+    from {
+        transform: rotate(-40deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+
+}
+@keyframes walk-thigh-right {
+    from {
+        transform: rotate(30deg);
+    }
+    to {
+        transform: rotate(-40deg);
+    }
+
+}
+@keyframes walk-leg-left {
+    from {
+        transform: rotate(-10deg);
+        left: 55px;
+    }
+    to {
+        transform: rotate(40deg);
+        left: 10px;
+    }
+
+}
+@keyframes walk-leg-right {
+    from {
+        transform: rotate(40deg);
+        left: 10px;
+    }
+    to {
+        transform: rotate(-10deg);
+        left: 55px;
+    }
+
+}

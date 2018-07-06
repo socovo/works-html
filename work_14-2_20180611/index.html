@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='zh-Hans-CN'>
+<head>
+    <meta http-equiv='content-type' content='textml' charset='utf-8'>
+    <title>表单-2</title>
+    <meta name='Keywords' content='作业, 表单-2'>
+    <meta name='Description' content='主要实现功能: 写了一大堆, 最大的收获是重新理解了:nth-child伪类, 原理一直理解错的'>
+    <link rel='stylesheet' media='screen' href='css/clean.css'>
+    <link rel='stylesheet' media='screen' href='css/header.css'>
+    <link rel='stylesheet' media='screen' href='css/content.css'>
+</head>
+<body>
+    <header>
+        <div class='header-area'>
+            <ul class='header-width-set'>
+                <li>
+                    <div class='tips'></div>
+                    <span>主题: 表单-2</span>
+                </li>
+                <li>
+                    <div class='tips'></div>
+                    <span>邮箱: socovo@live.com</span>
+                </li>
+                <li>
+                    <div class='tips'></div>
+                    <span>姓名: 宋臣</span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <content>
+        <div class='content-area'>
+            <form class='login-form' action='' method=''>
+                <label for='set-name' class='descrp'>User : </label>
+                <input id='set-name' class='input-size' type='text' class='name' name='username' placeholder='请输入账号'>
+                <p id='readme-1' class='readme'>用户名必须为4-16位数字或者英文字母</p>
+                <label for='set-pass' class='descrp'>Password : </label>
+                <input id='set-pass'  class='input-size' class='pass' type='password' name='pass' placeholder='请输入密码'>
+                <p id='readme-2' class='readme'>密码必须为4-16位数字或者英文字母或特殊字符</p>
+                <label for='set-cfm' class='descrp'>Password : </label>
+                <input id='set-cfm'  class='input-size' class='pass-confirm' type='password' name='pass' placeholder='请再次输入密码'>
+                <p id='readme-3' class='readme'>请保持与上方密码一致</p>
+                <label for='set-email' class='descrp'>Email : </label>
+                <input id='set-email'  class='input-size' type='email' name='email' placeholder='请填写注册邮箱'>
+                <p id='readme-4' class='readme'>请输入正确的邮箱地址</p>
+                <label for='set-nick' class='descrp'>nickname : </label>
+                <input id='set-nick'  class='input-size' class='third-name' type='text' name='third-name' placeholder='请输入你的昵称'>
+                <p id='readme-5' class='readme'>请输入昵称</p>
+                <input class='submit-btn' type='submit' name='login' value='我有账号，直接登录'>
+                <input class='btn' type='button' name='reg' value='注册'>
+            </form>
+        </div>
+    </content>
+    <footer></footer>
+</body>
+</html>

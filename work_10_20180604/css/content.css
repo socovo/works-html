@@ -1,0 +1,154 @@
+/* --------------------content -------------------- */
+#nav-area {/* 轮播图大区域 div */
+    position: relative;
+    width: 1226px;
+    margin: 100px auto 0;
+    background-color: red;
+}
+#bgpic-box img{
+    vertical-align: middle;/* 更改为块元素, 防止inline元素基线对齐造成的底部 */
+    width: 100%;
+    height: 100%;
+}
+#nav {/* 左侧导航区 div */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 234px;
+    height: 460px;
+    background-color: rgba(0,0,0,.8);
+}
+#nav ul {/* 左侧导航区 ul 定位 */
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+.submenu {/* 相对定位基准 */
+    position: relative;
+}
+.submenu:hover {/* 鼠标滑过背景色 */
+    background-color: #FF6700;
+}
+.submenu a {
+    padding-left: 30px;
+    color: white;
+    font-size: .9rem;
+    line-height: 42px;
+}
+.arrow {/* 小导航图标定位, 基于.submenu */
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/nav/arrow.png');
+    background-size: cover;
+}
+#review {/* 右侧大区域 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 992px;
+    height: 460px;
+}
+
+/* 导航大图切换按钮定位 */
+.big-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 41px;
+    height: 69px;
+    background-size: cover;
+}
+.big-arrow:nth-child(1) {
+    left: 0;
+    background-image: url('../images/nav/left-arrow.png');
+}
+.big-arrow:nth-child(2) {
+    right: 0;
+    background-image: url('../images/nav/right-arrow.png');
+}
+
+/* 二级菜单图定位 */
+.page {
+    display: none;
+    position: absolute;
+    left: 234px;
+    background-size: cover;
+    z-index: 1;
+}
+#page1 {
+    top: -20px;
+    width: 796px;
+    height: 460px;
+    background-image: url('../images/page/1.png');  
+}
+#page2 {
+    top: -62px;
+    width: 994px;
+    height: 460px;
+    background-image: url('../images/page/2.png');  
+}
+#page3 {
+    top: -104px;
+    width: 796px;
+    height: 460px;
+    background-image: url('../images/page/3.png');  
+}
+#page4 {
+    top: -146px;
+    width: 994px;
+    height: 460px;
+    background-image: url('../images/page/4.png');  
+}
+#page5 {
+    top: -188px;
+    width: 994px;
+    height: 460px;
+    background-image: url('../images/page/5.png');  
+}
+#page6 {
+    top: -230px;
+    width: 994px;
+    height: 460px;
+    background-image: url('../images/page/6.png');  
+}
+#page7 {
+    top: -272px;
+    width: 796px;
+    height: 460px;
+    background-image: url('../images/page/7.png');  
+}
+#page8 {
+    top: -314px;
+    width: 796px;
+    height: 460px;
+    background-image: url('../images/page/8.png');  
+}
+#page9 {
+    top: -356px;
+    width: 994px;
+    height: 460px;
+    background-image: url('../images/page/9.png');  
+}
+#page10 {
+    top: -398px;
+    width: 994px;
+    height: 460px;
+    background-image: url('../images/page/10.png');  
+}
+
+/* 二级菜单鼠标滑过显示 */
+.submenu:nth-child(1):hover #page1,
+.submenu:nth-child(2):hover #page2,
+.submenu:nth-child(3):hover #page3,
+.submenu:nth-child(4):hover #page4,
+.submenu:nth-child(5):hover #page5,
+.submenu:nth-child(6):hover #page6,
+.submenu:nth-child(7):hover #page7,
+.submenu:nth-child(8):hover #page8,
+.submenu:nth-child(9):hover #page9,
+.submenu:nth-child(10):hover #page10 {
+    display: block;
+}
