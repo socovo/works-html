@@ -1,132 +1,148 @@
 <!doctype html>
 <html lang='zh-Hans-CN'>
-	<head>
-		<!--头部-->
-		<meta http-equiv='content-type' content='textml' charset='utf-8'>
-		<meta name='Generator' content="EditPlus®">
-		<meta name='Author' content='宋臣'>
-		<meta name='Keywords' content='作业,菜单栏'>
-		<meta name='Description' content='作业,凯迪拉克,潭州教育'>
-		<title>菜单栏</title>
-		<script language="JavaScript">
-			function startTime()
-			{   
-				var today=new Date();//定义日期对象
-				var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年
-				var dd = today.getDate();//通过日期对象的getDate()方法返回年
-				var hh=today.getHours();//通过日期对象的getHours方法返回小时
-				var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟
-				var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒
-				// 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示152009
-				MM=checkTime(MM);
-				dd=checkTime(dd);
-				mm=checkTime(mm);
-				ss=checkTime(ss);
-				// 美国东部时间计算算法
-				/*var usa_hh;
-				var usa_dd;
-				var usa_MM;
-				var usa_YYYY;
-				usa_time(hh,dd,MM);*/
-				document.getElementById('nowDateTimeSpan').innerHTML=MM +"月"+ dd +"日" + hh+":"+mm+":"+ss;
-				setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法
-			}
-			/*//算法,传入参数h,d,M(时,天,月)
-            function usa_time(h,d,M)
-			{
-				if (hh>=12)//如果hh大于等于12,美国时间=hh-12,天数相同
-				{
-					usa_hh=h-12;
-				}
-				else//否则hh小于12,美国时间=hh+12,usa_dd=dd-1,前提dd要大于1
-				{
-					usa_hh=h+12;
-					if(dd>1)
-					{
-						usa_dd=d-1;
-					}
-					else {//当dd小于1的时候,就返回usa_dd值为上月的最后一天,usa_MM=MM-1,前提MM>1
-						if(M>1)
-						{
-							usa_MM=M-1;
-							usa_dd=getLastDay(usa_MM,YYYY);
-						}else {//MM为1月,usa_MM=12,usa_dd=31
-							usa_MM=12;
-							usa_dd=31;
-						}
-					}
-				}
-			}
-			function getLastDay(uM,Y)//传入参数usa_MM和年份
-			{
-				
-				if (uM==4||6||9||11)//小月30天
-				{
-					usa_dd=30;
-				}else if (uM==1||3||5||7||8||10||12)
-				{//大月31天
-					usa_dd=31;
-				}else if (uM==2)
-				{
-					if (((n%4)==0)&&(n%100)!=0)||(n%400==0))
-					{
-						usa_dd=29;
-					}else {
-						usa_dd=28;
-					}
-				}
-			}*/
-			function checkTime(i)
-			{
-				if (i<10){
-					i="0" + i;
-				}
-					return i;
-			}
-        </script>
-		<!--定义外部样式-->
-		<link rel='stylesheet' type='text/css' href='css/demo1.css'>
-		<style>
-			/*定义内部样式*/
-		</style>
-	</head>
 
-	<body onload='startTime()'>
-		<!--内容区-->
-		<div id='main'>
-			<div id='header-area'>
-				<div id='header'>
-					<ul>
-						<li><div class='corner'></div>主题: 菜单栏</li>
-						<li><div class='corner'></div>邮箱: socovo@live.com</li>
-						<li><div class='corner'></div>姓名: 宋臣</li>
-					</ul>
-				</div>
-			</div>
-			<div id='content-area'>
-				<div id='content'>
-					<ul>
-						<a href='#'style='color:white;'><li>科技首页</li></a>
-						<a href='#'style='color:white;'><li>IT业界</li></a>
-						<a href='#'style='color:white;'><li>创事记</li></a>
-						<a href='#'style='color:white;'><li>苹果汇</li></a>
-						<a href='#'style='color:white;'><li>电信</li></a>
-						<a href='#'style='color:white;'><li>互联网</li></a>
-						<a href='#'style='color:white;'><li>数码</li></a>
-						<a href='#'style='color:white;'><li>家电</li></a>
-						<a href='#'style='color:white;'><li>A股</li></a>
-						<a href='#'style='color:white;'><li>港股</li></a>
-						<a href='#'style='color:white;'><li>美股</li></a>
-					</ul>
-					<span id='adjust'>北京时间: </span>
-					<span id="nowDateTimeSpan"></span>
-					<span>美国东部时间: </span>
-				</div>
-			</div>
-			<div id='footer-area'>
-				<div id='footer'>
-				</div>
+<head>
+	<!--头部-->
+	<meta http-equiv='content-type' content='textml' charset='utf-8'>
+	<meta name='Generator' content="EditPlus®">
+	<meta name='Author' content='宋臣'>
+	<meta name='Keywords' content='作业,菜单栏'>
+	<meta name='Description' content='作业,凯迪拉克,潭州教育'>
+	<title>菜单栏</title>
+	<script language="JavaScript">
+
+		var YYYY, MM, dd, hh, mm, ss;
+		var usa_MM, usa_dd, usa_hh;
+
+		function updateTime() {//更新时间数据
+			var today = new Date();
+			YYYY = today.getFullYear();//通过日期对象的getFullYear()方法返回年
+			MM = today.getMonth() + 1;//通过日期对象的getMonth()方法返回月
+			dd = today.getDate();//通过日期对象的getDate()方法返回天
+			hh = today.getHours();//通过日期对象的getHours方法返回小时
+			mm = today.getMinutes();//通过日期对象的getMinutes方法返回分钟
+			ss = today.getSeconds();//通过日期对象的getSeconds方法返回秒
+			cptUsaTime(hh, dd, MM, YYYY);//计算美国时间
+		}
+
+		function getLastDay() {//计算上月最后一天
+			if (MM == 3 || 5 || 8 || 10) {//小月30天
+				return 30;
+			} else if (MM == 0 || 2 || 4 || 6 || 7 || 9 || 11) {//大月31天
+				return 31;
+			} else if (MM == 1) {
+				if (((n % 4) == 0) && ((n % 100) != 0) || (n % 400 == 0)) {
+					return 29;
+				} else {
+					return 28;
+				}
+			}
+		}
+
+		function cptUsaTime(hour, day, month, year) {
+			if (hour > 11) {//小时数大于11的情况
+				usa_hh = hour - 12;
+				usa_dd = day;
+				usa_MM = month;
+			} else {//小时数小于12的情况
+				usa_hh = hour + 12;
+				if (day == 1) {
+					if (month == 1) {
+						usa_MM = 12;
+						usa_dd = 31;
+					} else {//不是首月的情况
+						usa_MM = month - 1;
+						usa_dd = getLastDay();
+					}
+				} else {//不是首日的情况
+					usa_dd = day - 1;
+					usa_MM = month;
+				}
+
+			}
+		}
+
+		function showTime() {//显示时间
+			document.getElementById('nowDateTimeSpan').innerText = MM + "月" + dd + "日" + hh + ":" + mm + ":" + ss;
+			document.getElementById('usaTimeSpan').innerText = usa_MM + "月" + usa_dd + "日" + usa_hh + ":" + mm + ":" + ss;
+		}
+
+		function freshTime() {
+			setTimeout('freshTime()', 1000);//每1秒刷新时间
+			updateTime();//更新时间数据
+			showTime();//显示时间
+		}
+	</script>
+	<!--定义外部样式-->
+	<link rel='stylesheet' type='text/css' href='css/demo1.css'>
+	<style>
+		/*定义内部样式*/
+	</style>
+</head>
+
+<body onload='freshTime()'>
+	<!--内容区-->
+	<div id='main'>
+		<div id='header-area'>
+			<div id='header'>
+				<ul>
+					<li>
+						<div class='corner'></div>主题: 菜单栏</li>
+					<li>
+						<div class='corner'></div>邮箱: socovo@live.com</li>
+					<li>
+						<div class='corner'></div>姓名: 宋臣</li>
+				</ul>
 			</div>
 		</div>
-	</body>
+		<div id='content-area'>
+			<div id='content'>
+				<ul>
+					<a href='#' style='color:white;'>
+						<li>科技首页</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>IT业界</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>创事记</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>苹果汇</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>电信</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>互联网</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>数码</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>家电</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>A股</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>港股</li>
+					</a>
+					<a href='#' style='color:white;'>
+						<li>美股</li>
+					</a>
+				</ul>
+				<span id='adjust'>北京时间: </span>
+				<span id="nowDateTimeSpan"></span>
+				<span>美国东部时间: </span>
+				<span id="usaTimeSpan"></span>
+			</div>
+		</div>
+		<div id='footer-area'>
+			<div id='footer'>
+			</div>
+		</div>
+	</div>
+</body>
+
 </html>
